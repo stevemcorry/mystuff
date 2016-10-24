@@ -1,6 +1,24 @@
 body {
   box-sizing: border-box;
 }
+
+ /*ANIMATIONS*/
+@keyframes aBackground {
+  from { background-position: 0 0;}
+  to { background-position: 600% 0;}
+}
+#animate-area {
+	background-image: url(http://wallpaper.zone/img/2426944.png);
+	background-position: 0px 0px;
+	background-repeat: repeat;
+  background-size: 120vw;
+	animation: aBackground 40s linear infinite;
+}
+
+
+
+
+
 /* red red red red red red red HEADER red red red red red red*/
 header {
 
@@ -12,9 +30,12 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+.headerOff{
+  display: none;
+}
 .topTitle {
   display: inline-block;
-  font-family: tahoma;
+  font-family: Lora sans-serif;
   padding-left: 10px;
   font-size: 36px;
   font-weight: 300;
@@ -39,13 +60,63 @@ main {
   display: flex;
   justify-content: center;
 }
-.meat {
-height: 50vh;
-width: 50vw;
-margin-top: 85px;
-border: 1px solid red;
+.widen{
+  width: 50vw !important;
 }
-/*Footer*/
+/*.leftBar:hover, .rightBar:hover{
+  width: 50vw;
+  transition: all .2s ease-in;
+
+}*/
+.input {
+  cursor: pointer;
+  cursor: default;
+  outline: none;
+  height: 3em;
+  width: 3em;
+  background-color: lightcoral;
+  border: none;
+  font-size: 1.3em;
+  border-radius: 50%;
+  color: lightcoral;
+  transition: all .2s ease-in;
+}
+.input:focus {
+    width: 16em;
+    padding-left: 1em;
+    padding-right: 2.5em;
+    transition: all .2s ease-in;
+    border-radius: 10px;
+    color: white;
+  }
+.leftBar, .rightBar{
+  width: 20vw;
+  height: auto;
+  margin-top: 85px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+}
+.meat {
+height: auto;
+width: 60vw;
+margin-top: 85px;
+border: 5px outset hsla(172, 68%, 77%, 0.51);
+border-radius: 5px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+align-items: flex-start;
+}
+.boxApt{
+  height: 50px;
+  width: 16vw;
+  border: 1px solid green;
+  margin: 25px;
+}
+
+
+/* red red red red red red red Footer red red red red red red red */
 footer {
   position: fixed;;
   bottom:0px;
@@ -62,6 +133,9 @@ footer {
   display: flex;
   margin-right: 25px;
 }
+footer p{
+  font-family: lora;
+}
 footer ul {
   display: flex;
 }
@@ -69,3 +143,4 @@ footer ul li{
   list-style: none;
   position: relative;
 }
+/*               test              */

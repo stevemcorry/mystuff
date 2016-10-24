@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='myApp' ng-controller='mainCtrl'>
 <head>
   <meta charset="utf-8">
   <title>Stephen Corry</title>
   <link rel="stylesheet" href="index.css" media="screen" title="no title">
+  <fonts
+  <!-- font-family: 'Dosis', sans-serif;
+  font-family: 'Lora', serif;
+  font-family: 'Shanti', sans-serif; -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Lora|Shanti" rel="stylesheet">
+
 </head>
-<body>
+<body id="animate-area">
   <header>
-    <p class="topTitle">Crowd control</p>
+    <p class="topTitle">CROWD CONTROL</p>
     <button type="button" name="button" class="addApt">Add Apartment</button>
   </header>
   <main>
+    <div class="leftBar">
+      <input class="input"/><span class="fa"></span>
+    </div>
     <div class="meat">
+      <div class="boxApt" ng-repeat='apt in allApartments'>
+        {{apt.name}}<br>
+        {{apt.complex}}<br>
+        {{apt.perRoom}}
+      </div>
+    </div>
+    <div class="rightBar">
 
     </div>
 
   </main>
-
+  <div class="aptForm">
+    <form class="">
+      <input type="text" name="name" value="Name" ng-model='name' required><br>
+      <input type="text" list='Complexes'name="aptComplex" value="Complex" ng-model='complexName' required>
+      <datalist id="Complexes">
+        <option value="King Henry">
+        <option value="Liberty Square">
+      </datalist><br>
+      <input type="number" name="personCount" min='1' max='4' ng-model='perRoom' required>How many in your room?
+      <input type='submit' ng-click="addApt(name,complexName,perRoom)">Add Apartment
+    </form>
+  </div>
 
   <footer>
     <p>Show your appt on social media</p>
@@ -41,5 +68,11 @@
     </div>
   </footer>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js'> </script>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js">
+    </script>
+    <script src='app.js'></script>
+    <script src='mainCtrl.js'></script>
 </body>
 </html>
