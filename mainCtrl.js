@@ -3,13 +3,13 @@ angular.module('myApp').controller('mainCtrl', function($scope) {
 $scope.allApartments = [{
   name: 'Stephen',
   complex: 'Centennial',
-  perRoom: '2'+ " per room"
-}
+  perRoom: '2'
+}];
 
-];
 
 $scope.addApt = function(name,complexName,perRoom){
-  $scope.allApartments.push({
+  if(name&&complexName&&perRoom){
+  $scope.allApartments.unshift({
     name: name,
     complex: complexName,
     perRoom: perRoom + " in the room"
@@ -18,6 +18,8 @@ $scope.addApt = function(name,complexName,perRoom){
   $scope.name = '';
   $scope.complexName = '';
   $scope.perRoom = '';
+}
+
 };
 
 
