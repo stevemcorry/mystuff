@@ -3,7 +3,7 @@ angular.module('myApp').controller('mainCtrl', function($scope) {
 $scope.allApartments = [{
   name: 'Stephen',
   complex: 'Centennial',
-  perRoom: '2'+ " in the room"
+  perRoom: '2'+ " per room"
 }
 
 ];

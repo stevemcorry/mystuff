@@ -33,15 +33,16 @@
 
   </main>
   <div class="aptForm">
-    <form class="">
-      <input type="text" name="name" value="Name" ng-model='name' required><br>
-      <input type="text" list='Complexes'name="aptComplex" value="Complex" ng-model='complexName' required>
+    <form class="fillForm">
+      <span class="close">x</span>
+      <input type="text" name="name" placeholder='Your name' ng-model='name' required><br>
+      <input type="text" list='Complexes'placeholder='Apartmane Complex' value="Complex" ng-model='complexName' required>
       <datalist id="Complexes">
         <option value="King Henry">
         <option value="Liberty Square">
       </datalist><br>
-      <input type="number" name="personCount" min='1' max='4' ng-model='perRoom' required>How many in your room?
-      <input type='submit' ng-click="addApt(name,complexName,perRoom)">Add Apartment
+      <input type="number" placeholder='2' min='1' max='4' ng-model='perRoom' required>How many in your room?<br>
+      <input type='submit' ng-click="addApt(name,complexName,perRoom)" class='submitApt'>Add Apartment
     </form>
   </div>
 
