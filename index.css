@@ -138,7 +138,7 @@ align-items: flex-start;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: none; /* Enable scroll if needed */
+    overflow: none;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -150,12 +150,26 @@ align-items: flex-start;
     width: 40vw;
     height: 50vh;
     border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.fillForm input{
+  background: #e8e8e8;
+  font-family: lora;
+  width: 30vw !important;
+  height: 3vh;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
 }
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    align-self: flex-end;
 }
 
 .close:hover,
